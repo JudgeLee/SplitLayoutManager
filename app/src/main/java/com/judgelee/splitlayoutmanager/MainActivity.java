@@ -1,5 +1,6 @@
 package com.judgelee.splitlayoutmanager;
 
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
   private List<String> mTitles;
   private RecyclerView mRecyclerView;
+  private TextView mTextView;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -27,29 +29,38 @@ public class MainActivity extends AppCompatActivity {
     mRecyclerView = findViewById(R.id.recycler_view);
     mRecyclerView.setAdapter(new SimpleAdapter(mTitles));
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+    mTextView = findViewById(R.id.text);
+    mTextView.setText("LinearLayoutManager Vertical");
   }
 
   public void onClickLinearLayoutVertical(View view) {
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+    mTextView.setText("LinearLayoutManager Vertical");
   }
 
   public void onClickLinearLayoutHorizontal(View view) {
     mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+    mTextView.setText("LinearLayoutManager Horizontal");
   }
 
   public void onClickGridLayoutHorizontal(View view){
     mRecyclerView.setLayoutManager(new GridLayoutManager(this, 6));
+    mTextView.setText("GridLayoutManager Horizontal");
   }
 
   public void onClickGridLayoutVertical(View view) {
     mRecyclerView.setLayoutManager(new GridLayoutManager(this, 6, LinearLayoutManager.HORIZONTAL, false));
+    mTextView.setText("GridLayoutManager Vertical");
   }
 
   public void onClickSplitLayoutVertical(View view) {
     mRecyclerView.setLayoutManager(new SplitLayoutManager(SplitLayoutManager.VERTICAL, 6));
+    mTextView.setText("SplitLayoutManager Vertical");
   }
 
   public void onClickSplitLayoutHorizontal(View view) {
     mRecyclerView.setLayoutManager(new SplitLayoutManager(SplitLayoutManager.HORIZONTAL, 6));
+    mTextView.setText("SplitLayoutManager Horizontal");
   }
 }
