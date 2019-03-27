@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:onClick="onClickLinearLayoutVertical"
+      android:text="LinearLayout Vertical" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:onClick="onClickLinearLayoutHorizontal"
+      android:text="LinearLayout Horizontal" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:onClick="onClickGridLayoutVertical"
+      android:text="GridLayout Vertical" />
+
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:onClick="onClickGridLayoutHorizontal"
+      android:text="GridLayout Horizontal" />
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:onClick="onClickSplitLayoutVertical"
+      android:text="SplitLayout Vertical" />
+
+
+    <Button
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:onClick="onClickSplitLayoutHorizontal"
+      android:text="SplitLayout Horizontal" />
+
+  </LinearLayout>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="400dp" />
+
+</LinearLayout>
