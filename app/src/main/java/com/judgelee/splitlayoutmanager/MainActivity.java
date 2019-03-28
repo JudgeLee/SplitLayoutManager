@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
   public void onClickSplitLayoutVertical(View view) {
     mRecyclerView.setLayoutManager(new SplitLayoutManager(SplitLayoutManager.VERTICAL, 6));
-    mTextView.setText("SplitLayoutManager Vertical");
+    mTextView.setText("SplitLayoutManager Vertical\n 纵向6个Item均分");
   }
 
   public void onClickSplitLayoutHorizontal(View view) {
     mRecyclerView.setLayoutManager(new SplitLayoutManager(SplitLayoutManager.HORIZONTAL, 6));
-    mTextView.setText("SplitLayoutManager Horizontal");
+    mTextView.setText("SplitLayoutManager Horizontal\n 横向6个Item均分");
   }
 }

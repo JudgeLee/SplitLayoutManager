@@ -61,7 +61,7 @@
     android:layout_height="400dp" />
 
   <TextView
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="20dp"
     android:id="@+id/text"
     android:textSize="20sp"
     android:layout_width="match_parent"
