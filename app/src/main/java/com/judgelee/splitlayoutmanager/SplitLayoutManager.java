@@ -289,4 +289,9 @@ public class SplitLayoutManager extends RecyclerView.LayoutManager {
       return new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
     }
   }
+
+  @Override
+  public boolean isAutoMeasureEnabled() {
+    return true;
+  }
 }
