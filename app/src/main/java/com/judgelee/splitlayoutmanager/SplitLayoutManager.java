@@ -33,6 +33,7 @@ public class SplitLayoutManager extends RecyclerView.LayoutManager {
   public SplitLayoutManager(int orientation, int spanCount) {
     setOrientation(orientation);
     setSpan(spanCount);
+    // 28.0以下的RecyclerView需要指定setAutoMeasureEnabled(true);
   }
 
   private void setOrientation(int orientation) {
